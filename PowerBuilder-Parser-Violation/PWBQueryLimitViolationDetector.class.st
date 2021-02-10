@@ -24,5 +24,6 @@ PWBQueryLimitViolationDetector >> visitPWBASTNumber: anPWBASTNumber [
 						stopPosition: (self unpreprocessedPosition: anPWBASTNumber stopPosition);
 						libray: currentLibrary;
 						behavior: currentBehavior;
+						value: anPWBASTNumber number;
 						yourself) ]
 ]

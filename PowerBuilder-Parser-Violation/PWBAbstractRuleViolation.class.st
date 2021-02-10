@@ -6,7 +6,8 @@ Class {
 		'startPosition',
 		'stopPosition',
 		'library',
-		'behavior'
+		'behavior',
+		'value'
 	],
 	#category : #'PowerBuilder-Parser-Violation'
 }
@@ -100,5 +101,10 @@ PWBAbstractRuleViolation >> stopPosition: anInteger [
 
 { #category : #accessing }
 PWBAbstractRuleViolation >> value [
-	^ file contents copyFrom: self startPosition to: self stopPosition
+	^ value
+]
+
+{ #category : #accessing }
+PWBAbstractRuleViolation >> value: aString [
+	value := aString
 ]

@@ -198,3 +198,13 @@ PWBSVNManager >> runViolations [
 		publishDiff.
 	self cleanUp
 ]
+
+{ #category : #'accessing ' }
+PWBSVNManager >> svnHead: anInteger [ 
+	svnHead := anInteger
+]
+
+{ #category : #accessing }
+PWBSVNManager >> svnPrev: anInteger [ 
+	svnPrev := anInteger
+]

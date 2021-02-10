@@ -25,9 +25,8 @@ PWBSVNDiffViolationManager >> author: aString [
 PWBSVNDiffViolationManager >> diffHeadPrev [
 	^ self head
 		select: [ :violation | 
-			self prev
-				allSatisfy:
-					[ :each | (violation isSameAs: each) not or: [ violation isReportCrossCommitViolation ] ] ]
+			(self prev noneSatisfy: [ :each | violation isSameAs: each ])
+				or: violation isReportCrossCommitViolation ]
 ]
 
 { #category : #accessing }
